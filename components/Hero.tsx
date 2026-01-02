@@ -32,8 +32,8 @@ const Hero: React.FC<HeroProps> = ({ month, onMonthChange }) => {
 
       // 2. Trigger the file download
       const link = document.createElement('a');
-      link.href = '/Calendario2026-S-by-S.pdf';
-      link.download = 'Calendario2026-S-by-S.pdf';
+      link.href = '/Calendario2026-SbyS.pdf';
+      link.download = 'Calendario2026-SbyS.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
