@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MonthData } from '../types';
-import PlannerPreview from './PlannerPreview';
+
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -52,6 +52,8 @@ const Hero: React.FC<HeroProps> = ({ month, onMonthChange }) => {
     }
   };
 
+
+
   return (
     <section className="relative overflow-hidden pt-12 pb-24 px-6">
       {/* Decorative background numbers */}
@@ -85,10 +87,7 @@ const Hero: React.FC<HeroProps> = ({ month, onMonthChange }) => {
               )}
               {isDownloading ? 'Descargando...' : 'Descargar Planificador'}
             </button>
-            <button className="flex items-center justify-center gap-3 bg-white dark:bg-zinc-900 border-2 border-primary/10 dark:border-white/10 text-primary dark:text-accent px-8 py-5 rounded-xl font-bold text-lg hover:bg-primary/5 dark:hover:bg-white/5 transition-all duration-300 shadow-sm">
-              <span className="material-icons">visibility</span>
-              Vista Previa
-            </button>
+
           </div>
 
 
@@ -96,9 +95,13 @@ const Hero: React.FC<HeroProps> = ({ month, onMonthChange }) => {
 
         {/* Visual Preview */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-lg">
+          <div className="relative w-full max-w-lg transform hover:scale-[1.02] transition-transform duration-500">
              <div className="absolute inset-0 bg-accent/20 dark:bg-accent/5 rounded-[3rem] blur-3xl -z-10 animate-pulse" />
-             <PlannerPreview month={month} />
+             <img 
+               src="/calendar-preview.png" 
+               alt="Vista previa del calendario 2026" 
+               className="w-full h-auto rounded-3xl shadow-2xl border-4 border-white/50 dark:border-white/10"
+             />
           </div>
         </div>
       </div>
