@@ -65,8 +65,8 @@ const Hero: React.FC<HeroProps> = ({ month, onMonthChange }) => {
         {/* Text Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-start space-y-10 animate-fade-in">
           <div className="space-y-2">
-            <h1 className="text-7xl sm:text-9xl font-serif font-black text-primary dark:text-accent leading-[0.8]">
-              {month.name}
+            <h1 className="text-5xl sm:text-9xl font-serif font-black text-primary dark:text-accent leading-[0.8]">
+              Planificador
             </h1>
             <p className="text-4xl sm:text-6xl font-serif font-light text-primary/80 dark:text-accent/80 tracking-widest">
               {month.year}
@@ -85,7 +85,7 @@ const Hero: React.FC<HeroProps> = ({ month, onMonthChange }) => {
               ) : (
                 <span className="material-icons group-hover:animate-bounce">download</span>
               )}
-              {isDownloading ? 'Descargando...' : 'Descargar Planificador'}
+              {isDownloading ? 'Descargando...' : 'Descargar'}
             </button>
 
           </div>
